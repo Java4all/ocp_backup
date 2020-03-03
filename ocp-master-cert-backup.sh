@@ -14,7 +14,7 @@ readonly TAR_FILE_PREFIX="certs-and-keys"
 readonly DEST_BACKUP_DIR="/tmp"
 #Location (on the master) where the tar will be copied.
 #This parameter should be updated to use a location that's backed up on the host.
-readonly BACKUP_DEST_DIR="/tmp/ocp-master-backup"
+readonly BACKUP_DEST_DIR="/backup/$(hostname)/$(date +%Y%m%d)/ocp-master-certs-backup"
 
 # Check if executed as root
 if [[ $EUID -ne 0 ]]; then
